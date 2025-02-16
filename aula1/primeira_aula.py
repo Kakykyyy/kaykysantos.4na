@@ -1,3 +1,64 @@
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_iris
+
+# Carrega o dataset Iris
+iris = load_iris()
+
+# Divide os dados em treino e teste
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.3)
+
+# Cria o modelo KNN
+knn = KNeighborsClassifier(n_neighbors=3)
+
+# Treina o modelo
+knn.fit(X_train, y_train)
+
+# Faz previsões
+y_pred = knn.predict(X_test)
+
+# Avalia o modelo
+accuracy = knn.score(X_test, y_test)
+print(f"Acurácia: {accuracy}")
+
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+
+# Cria dados sintéticos
+X, y = make_blobs(n_samples=300, centers=4, random_state=42)
+
+# Cria o modelo KMeans
+kmeans = KMeans(n_clusters=4)
+
+# Treina o modelo
+kmeans.fit(X)
+
+# Obtém os центróides dos clusters
+centroids = kmeans.cluster_centers_
+
+# Imprime os центróides
+print(f"Centróides: {centroids}")
+
+
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+
+# Cria dados sintéticos
+X, y = make_blobs(n_samples=300, centers=4, random_state=42)
+
+# Cria o modelo KMeans
+kmeans = KMeans(n_clusters=4)
+
+# Treina o modelo
+kmeans.fit(X)
+
+# Obtém os центróides dos clusters
+centroids = kmeans.cluster_centers_
+
+# Imprime os центróides
+print(f"Centróides: {centroids}")
+
+
 import numpy as np
 
 # Define o ambiente
