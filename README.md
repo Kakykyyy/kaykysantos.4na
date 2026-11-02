@@ -41,7 +41,7 @@ python -m pip install numpy pandas scikit-learn statsmodels matplotlib seaborn
 python aula2/desafioaula2.py
 ```
 
-Para ativar o ambiente virtual, use `.venv\\Scripts\\Activate.ps1` no PowerShell ou `source .venv/bin/activate` no Linux/macOS.
+Para ativar o ambiente virtual, use `.venv\Scripts\Activate.ps1` no PowerShell ou `source .venv/bin/activate` no Linux/macOS.
 
 ## Organização
 
