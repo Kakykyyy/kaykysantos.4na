@@ -1,53 +1,67 @@
-# Estudos de aprendizado de máquina
+<div align="center">
 
-Exercícios em Python organizados por aula, cobrindo regressão, classificação, agrupamento e avaliação de modelos. Os dados são exemplos sintéticos ou conjuntos incluídos no scikit-learn.
+# Laboratório de Machine Learning
 
-## Ambiente
+**Da regressão linear à avaliação de classificadores**
 
-Requer Python 3 e, para os gráficos, ambiente capaz de abrir janelas. As versões das bibliotecas não estão fixadas; os comandos abaixo são uma preparação sugerida.
+![Python](https://img.shields.io/badge/Python-20232a?style=flat-square) ![scikit-learn](https://img.shields.io/badge/scikit%2Dlearn-20232a?style=flat-square) ![NumPy](https://img.shields.io/badge/NumPy-20232a?style=flat-square) ![Pandas](https://img.shields.io/badge/Pandas-20232a?style=flat-square) ![Matplotlib](https://img.shields.io/badge/Matplotlib-20232a?style=flat-square)
+
+[Sobre](#sobre) · [Como executar](#como-executar) · [Documentação](DOCUMENTACAO.md)
+
+</div>
+
+---
+
+## Sobre
+
+Repositório de estudos com exemplos de aprendizado de máquina organizados por aula. Os exercícios combinam implementação, métricas e visualizações para explorar o comportamento dos modelos.
+
+## Destaques
+
+- Regressão linear manual e com statsmodels.
+- Classificação com KNN e árvores de decisão.
+- Agrupamento com KMeans e exemplo de tabela Q.
+- Métricas, matriz de confusão, curva ROC e validação cruzada.
+
+## Como executar
+
+Clone o repositório:
 
 ```sh
 git clone https://github.com/Kakykyyy/kaykysantos.4na.git
 cd kaykysantos.4na
-python -m venv .venv
 ```
 
-Ative com `.venv\Scripts\Activate.ps1` no PowerShell ou `source .venv/bin/activate` no Linux/macOS.
+Requer Python 3. Para os exercícios com gráficos, utilize um ambiente com suporte a janelas.
 
 ```sh
+python -m venv .venv
+# Ative o ambiente virtual antes de continuar.
 python -m pip install numpy pandas scikit-learn statsmodels matplotlib seaborn
 python aula2/desafioaula2.py
 ```
 
-## Roteiro dos arquivos
+Para ativar o ambiente virtual, use `.venv\\Scripts\\Activate.ps1` no PowerShell ou `source .venv/bin/activate` no Linux/macOS.
 
-| Arquivo | Conteúdo |
-|---|---|
-| `aula1/primeira_aula.py` | KNN no Iris, KMeans em dados sintéticos e atualização de tabela Q |
-| `aula2/desafioaula2.py` | Regressão linear simples calculada manualmente |
-| `aula2/primeiro_exemploaula2.py` | Regressão OLS com statsmodels e gráfico |
-| `aula2/segundoaula2.py` | KNN no Iris, relatório e matriz de confusão |
-| `aula2/terceiro.py` | Árvore de decisão no Iris e visualização |
-| `aula3/classifcacao.py` | Acurácia, precisão, recall, F1 e matriz de confusão |
-| `aula3/regressao.py` | MAE, MSE, RMSE e R² |
-| `aula3/desafio3.py` | KNN no Wine, normalização, ROC, validação cruzada e comparação de K |
-| `aula3/notebook.ipynb` | Notebook disponível para exploração |
+## Organização
 
-Para executar outro exercício, substitua o caminho após `python`. O nome `classifcacao.py` está grafado dessa forma no repositório.
+```text
+aula1/ # KNN, KMeans e tabela Q
+aula2/ # Regressão e classificação
+aula3/ # Métricas e experimentos com Wine
+```
 
-## Uso e interpretação
+## Roteiro de estudos
 
-Leia o script, execute-o e observe as métricas no terminal. Nos exercícios com `plt.show()`, feche cada janela para permitir que a execução avance. Não há serviço web, configuração de banco nem treinamento de produção.
+1. Comece por `aula2/desafioaula2.py` para acompanhar o cálculo da regressão.
+2. Explore `aula2/segundoaula2.py` e `aula2/terceiro.py` para comparar classificadores no Iris.
+3. Execute `aula3/classifcacao.py` e `aula3/regressao.py` para conhecer as métricas.
+4. Avance para `aula3/desafio3.py` para experimentar KNN no Wine.
 
-Algumas divisões de dados usam `random_state=42`; outras operações são aleatórias e podem variar. No desafio Wine, a validação cruzada recebe `X` sem o mesmo pipeline de normalização usado na separação treino/teste; seus resultados não são diretamente equivalentes. A curva ROC usa a primeira classe binarizada, apesar do rótulo visual “Classe 1”.
+## Documentação técnica
 
-## Verificação manual
+O [guia técnico](DOCUMENTACAO.md) reúne configuração, comportamento dos dados, limitações conhecidas e verificações manuais. As instruções foram elaboradas a partir da leitura do código; a execução dos projetos não foi validada nesta revisão.
 
-Execute primeiro `aula2/desafioaula2.py` e depois os exemplos de métricas em `aula3/`. Confirme a saída no terminal e a abertura dos gráficos nos demais exercícios. Não há testes automatizados nem versões de dependências homologadas nesta documentação.
+## Autor
 
-## Licença
-
-Não há arquivo LICENSE na árvore analisada.
-
----
-Documentação baseada na leitura da branch principal em 2 de novembro de 2026. Os procedimentos não foram executados nesta revisão documental.
+Desenvolvido por [Kayky Erick · @Kakykyyy](https://github.com/Kakykyyy).
